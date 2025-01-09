@@ -41,7 +41,6 @@ export default () => {
     // Анимация
     const animate = () => {
         ctx.clearRect(0, 0, width, height); // Очищаем Canvas
-        console.log('frame');
 
         rombs.forEach((romb) => {
             drawRomb(romb.x, romb.y, romb.size, romb.scale);

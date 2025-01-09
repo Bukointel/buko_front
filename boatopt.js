@@ -6,9 +6,12 @@ export default async () => {
     const app = new Application();
     const textures = await loadTextures();
 
-    const w = window.innerWidth;
+    let w = window.innerWidth;
     const h = window.innerHeight;
 
+    if (w < 500) {
+        w = w * 2
+    }
     const aspect = w / h
 
     // const elw = w > 800 ? w / 2 : w;

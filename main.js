@@ -15,7 +15,7 @@ import tokenomics from './tokenomics.js'
 import numbers from './numbers.js'
 import htb from './htb.js'
 import rombs from './rombs.js'
-import boat from './boat.js'
+import boat from './boatopt.js'
 
 
 
@@ -39,6 +39,10 @@ window.onload = function () {
         tokenomics(gsap)
         numbers(gsap)
         htb(gsap)
+        boat()
+        window.addEventListener('resize', () => {
+            boat()
+        })
     }, 500);
 };
 

@@ -1,12 +1,8 @@
 
-name: Backend deployment to server
+name: Deployment
 
 on:
   push:
-    branches:
-      - 'dev'
-      - 'master'
-  pull_request:
     branches:
       - 'master'
 
@@ -15,16 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Define deployment variables
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/dev" ]; then
-            echo "TARGET_DIR=/home/saldos/dev" >> $GITHUB_ENV
-            echo "BRANCH=dev" >> $GITHUB_ENV
-          else
-            echo "TARGET_DIR=/home/saldos" >> $GITHUB_ENV
-            echo "BRANCH=master" >> $GITHUB_ENV
-          fi
-
       - name: Deployment
         id: deploy
         uses: appleboy/ssh-action@master
@@ -38,11 +24,10 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             
-            cd ${{ env.TARGET_DIR }}
+            cd /home/buko_front
             
             echo "Pulling the latest code from the repository"
-            git checkout ${{ env.BRANCH }}
-            git pull origin ${{ env.BRANCH }}
+            git pull
             
             echo "Installing dependencies"
             npm install
@@ -58,11 +43,3 @@ jobs:
         if: always()
         run: |
           echo "status=${{ steps.deploy.outcome }}" >> $GITHUB_ENV
-
-      # - name: Telegram Notification
-      #   if: always()
-      #   uses: ivandalechenko/tgDeployNotifier@master
-      #   with:
-      #     token: ${{ secrets.BOT_TOKEN }}
-      #     chatId: ${{ secrets.CHAT_ID }}
-      #     status: ${{ env.status }}

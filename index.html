@@ -1,13 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+  <style>
+    #loader {
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100dvh;
+      background: linear-gradient(to top, #48FFCB, #00D67E);
+      transition: opacity 500ms;
+      position: fixed;
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      z-index: 99;
+    }
+
+    #loader_img {
+      animation: loader 1s infinite cubic-bezier(0.7, 0, 0.3, 1);
+    }
+
+    @keyframes loader {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      70% {
+        transform: rotate(360deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="loader">
+    <svg id="loader_img" width="150" height="150" viewBox="0 0 170 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M136.367 116.412C143.65 126.63 147.082 132.055 147.082 137.714C147.082 148.89 137.768 154.309 125.22 154.309C119.689 154.309 116.119 154.302 107.095 150.119C107.095 150.119 101.249 145.351 87.5665 145.841C73.7567 145.354 67.9066 150.179 67.9066 150.179C58.8832 154.359 55.4406 154.315 49.9166 154.315C37.369 154.315 28.0478 148.902 28.0478 137.72C28.0478 132.061 31.4906 126.643 38.7695 116.418C38.7695 116.418 52.5297 96.0538 64.4533 86.4737C73.0689 79.5604 85.6307 79.5856 85.6307 79.5856H89.5059C89.5059 79.5856 102.617 79.554 110.694 86.4737C122.249 96.4014 136.367 116.415 136.367 116.412ZM56.9119 65.9675C70.0304 65.9675 80.6634 51.1992 80.6634 32.9837C80.6634 14.7683 70.0304 0 56.9119 0C43.7935 0 33.1605 14.7683 33.1605 32.9837C33.1605 51.1992 43.7935 65.9675 56.9119 65.9675ZM34.1497 97.9117C43.8183 93.9337 46.0236 79.8289 39.0709 66.4067C32.1181 52.9844 18.6451 45.3254 8.97647 49.3002C-0.692163 53.2751 -2.89392 67.383 4.0553 80.8053C11.0081 94.2275 24.4811 101.883 34.1497 97.9117ZM112.133 65.9675C125.252 65.9675 135.888 51.1992 135.888 32.9837C135.888 14.7683 125.252 0 112.133 0C99.015 0 88.382 14.7683 88.382 32.9837C88.382 51.1992 99.015 65.9675 112.133 65.9675ZM160.072 49.2971C150.4 45.3191 136.931 52.9781 129.978 66.4035C123.025 79.8289 125.231 93.9337 134.903 97.9117C144.575 101.887 158.044 94.2275 164.997 80.8053C171.95 67.383 169.745 53.2751 160.072 49.2971Z"
+        fill="white" />
+    </svg>
+  </div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

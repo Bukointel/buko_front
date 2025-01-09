@@ -1,10 +1,13 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import './nullAndFonts.scss'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <App />
 )
+
+
+document.getElementById('loader').style.opacity = '0';
+setTimeout(() => {
+  document.getElementById('loader').style.display = 'none';
+}, 500);

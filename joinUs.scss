@@ -1,0 +1,329 @@
+.joinUs {
+    &_Bg {
+        width: 100%;
+        height: 1000px;
+        background: url('/img/joinUsBg.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+
+        @media(max-width: 500px) {
+            height: 800px;
+        }
+    }
+
+    &_content {
+        // min-width: 160%;
+        background-color: #fff;
+        width: 100%;
+        padding-bottom: 120px;
+        // height: 500px;
+        // border-radius: 100% 100% 0px 0px;
+
+        &_wrapper {
+            border-top: 10px solid #000;
+            position: relative;
+            top: -10px;
+            z-index: 9;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &_header {
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 800px;
+            max-width: 90vw;
+        }
+    }
+
+    &_links {
+        margin: 0 auto;
+        margin-top: 120px;
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media(max-width: 1250px) {
+            max-width: 95vw;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 20px;
+        }
+
+    }
+
+    &_media {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media(max-width: 600px) {
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+    }
+
+    &_warning {
+        font-size: 24px;
+        font-family: 'koni';
+
+        @media(max-width: 1250px) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &_link,
+    &_buy {
+        height: 100px;
+        border: 5px solid #000;
+        box-shadow: 4px 4px #000;
+        border-radius: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        transition: box-shadow 200ms, transform 200ms;
+
+        img {
+            width: 55px;
+        }
+
+        &:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px #000;
+        }
+
+    }
+
+    &_link {
+        width: 100px;
+
+    }
+
+    &_buy {
+        border-radius: 40px;
+        background-color: #00A3FF;
+        font-family: 'koni';
+        font-size: 50px;
+        color: #fff;
+        padding: 0px 32px;
+        padding-top: 12px;
+    }
+
+}
+
+
+#joinUs_newBg {
+    border-top: 10px solid #000;
+
+    canvas {
+        touch-action: manipulation !important;
+    }
+}
+
+// .joinUs_newBg {
+//     height: 80vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     overflow: hidden;
+//     border-top: 10px solid #000;
+
+//     &_boat {
+//         top: 17vw;
+
+//         animation: boatanim 1.5s infinite ease-in-out;
+
+//         @keyframes boatanim {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             50% {
+//                 translate: 0px -2vw;
+//             }
+
+//             100% {
+//                 translate: 0px 0vw;
+//             }
+//         }
+
+//         img {
+//             width: 50vw;
+//         }
+//     }
+
+//     &_sea {
+//         align-items: start;
+//         top: -10vw;
+//         animation: seaanim 5s infinite linear;
+
+//         @keyframes seaanim {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 50vw 0px;
+//             }
+//         }
+
+//         img {
+//             width: 50vw;
+//         }
+//     }
+
+//     &_backsea {
+//         // top: 50vh;
+//         align-items: start;
+//         top: -10vw;
+
+//         animation: backseaanim 8s infinite linear;
+
+//         @keyframes backseaanim {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 50vw 0px;
+//             }
+//         }
+
+//         img {
+//             width: 50vw;
+//         }
+//     }
+
+//     &_beach {
+//         top: 10vw;
+
+//         animation: beach 50s infinite linear;
+
+//         @keyframes beach {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 100vw 0px;
+//             }
+//         }
+
+//         img {
+//             width: 100vw;
+//         }
+//     }
+
+//     &_palms {
+//         top: 12vw;
+
+//         animation: palms 20s infinite linear;
+
+//         @keyframes palms {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 80vw 0px;
+//             }
+//         }
+
+//         img {
+//             width: 80vw;
+//         }
+//     }
+
+//     &_cloud1,
+//     &_cloud2,
+//     &_cloud3,
+//     &_cloud4 {
+//         top: 5vw;
+
+//         animation: cloud 80s infinite linear;
+
+//         @keyframes cloud {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 80vw 0px;
+//             }
+//         }
+
+//         img {
+//             width: 80vw;
+//         }
+//     }
+
+//     &_cloud1 {
+//         animation: cloud 80s infinite linear;
+
+//         @keyframes cloud {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 80vw 0px;
+//             }
+//         }
+//     }
+
+//     &_cloud2 {
+//         animation: cloud 120s infinite linear;
+
+//         @keyframes cloud {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 80vw 0px;
+//             }
+//         }
+//     }
+
+//     &_cloud3 {
+//         animation: cloud 40s infinite linear;
+
+//         @keyframes cloud {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 80vw 0px;
+//             }
+//         }
+//     }
+
+//     &_cloud4 {
+//         animation: cloud 60s infinite linear;
+
+//         @keyframes cloud {
+//             0% {
+//                 translate: 0px 0px;
+//             }
+
+//             100% {
+//                 translate: 80vw 0px;
+//             }
+//         }
+//     }
+
+// }

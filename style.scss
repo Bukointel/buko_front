@@ -1,0 +1,29 @@
+@import 'null';
+@import 'fonts';
+@import 'header';
+@import 'hero';
+@import 'runtext';
+@import 'roadmap';
+@import 'tokenomics';
+@import 'numbers';
+@import 'howTo';
+@import 'joinUs';
+
+
+
+
+
+#app {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.dnone {
+    display: none;
+}
+
+
+.ready {
+    // display: none;
+}

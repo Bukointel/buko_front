@@ -7,7 +7,7 @@ export default async () => {
     const textures = await loadTextures();
 
     let w = window.innerWidth;
-    const h = window.innerHeight;
+    const h = w > 600 ? window.innerHeight : window.innerHeight / 2;
 
     if (w < 500) {
         w = w * 2

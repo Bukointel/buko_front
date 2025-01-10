@@ -5,7 +5,7 @@ export default (gsap) => {
 
     gsap.to('.numbers_header', {
         text: {
-            value: "LETS LOOK ON SOME NUMBERS..."
+            value: "LETS CHAT!"
         }, scrollTrigger: {
             trigger: '.numbers',
             scrub: 1,

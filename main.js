@@ -16,6 +16,7 @@ import numbers from './numbers.js'
 import htb from './htb.js'
 import rombs from './rombs.js'
 import boat from './boatopt.js'
+import chat from './chat.js'
 
 
 
@@ -23,6 +24,7 @@ const bukoAnimated = new Image();
 bukoAnimated.src = '/img/heroContent.gif';
 window.onload = function () {
     setTimeout(() => {
+        chat()
         heroBg()
         hideLoader()
         // Тут анимки на главной страничке (на главном экране)

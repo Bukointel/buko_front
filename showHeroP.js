@@ -1,10 +1,17 @@
 export default (gsap) => {
-    gsap.to('.hero_p_inner', {
-        duration: 3, text: {
-            value: "Check out this MEME blockchain magic! Flipping the script, cruising the decentralized seas, and stacking those Pepeverse Ws like a true degen!"
-        },
-        ease: 'linear'
 
+    const tl = gsap.timeline().to('.hero_p_inner_span_1', {
+        duration: .5, delay: .5, text: {
+            value: "Wild Degens."
+        }, ease: 'linear'
+    }).to('.hero_p_inner_span_2', {
+        duration: .5, delay: .5, text: {
+            value: "Sharp Tools."
+        }, ease: 'linear'
+    }).to('.hero_p_inner_span_3', {
+        duration: .5, delay: .5, text: {
+            value: "One Empire."
+        }, ease: 'linear'
     })
 
 }

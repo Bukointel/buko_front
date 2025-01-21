@@ -1,45 +1,45 @@
 
-name: Deployment
+# name: Deployment
 
-on:
-  push:
-    branches:
-      - 'master'
+# on:
+#   push:
+#     branches:
+#       - 'master'
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Deployment
-        id: deploy
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          script: |
-            set -e
+#     steps:
+#       - name: Deployment
+#         id: deploy
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{ secrets.HOST }}
+#           username: root
+#           password: ${{ secrets.PASSWORD }}
+#           script: |
+#             set -e
             
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#             export NVM_DIR="$HOME/.nvm"
+#             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             
-            cd /home/buko_front
+#             cd /home/buko_front
             
-            echo "Pulling the latest code from the repository"
-            git pull
+#             echo "Pulling the latest code from the repository"
+#             git pull
             
-            echo "Installing dependencies"
-            npm install
+#             echo "Installing dependencies"
+#             npm install
             
-            echo "Building the project"
-            npm run build
+#             echo "Building the project"
+#             npm run build
             
-            echo "Restarting the server"
+#             echo "Restarting the server"
             
-            echo "Deployment completed successfully"
+#             echo "Deployment completed successfully"
 
-      - name: Set status
-        if: always()
-        run: |
-          echo "status=${{ steps.deploy.outcome }}" >> $GITHUB_ENV
+#       - name: Set status
+#         if: always()
+#         run: |
+#           echo "status=${{ steps.deploy.outcome }}" >> $GITHUB_ENV

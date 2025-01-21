@@ -40,7 +40,7 @@ window.onload = function () {
         roadmap(gsap)
         tokenomics(gsap)
         numbers(gsap)
-        htb(gsap)
+        // htb(gsap)
         boat()
         window.addEventListener('resize', () => {
             boat()

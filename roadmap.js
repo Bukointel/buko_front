@@ -28,7 +28,7 @@ export default (gsap) => {
     })
     gsap.to('.roadmap_step_content_1', {
         text: {
-            value: "Vibe, Thrive, and Meme"
+            value: "DeFAI"
         }, scrollTrigger: {
             trigger: '.roadmap',
             scrub: 1,
@@ -53,7 +53,7 @@ export default (gsap) => {
     })
     gsap.to('.roadmap_step_content_2', {
         text: {
-            value: "HODL Tight, Meme Bright"
+            value: "Degen"
         }, scrollTrigger: {
             trigger: '.roadmap',
             scrub: 1,
@@ -78,7 +78,7 @@ export default (gsap) => {
     })
     gsap.to('.roadmap_step_content_3', {
         text: {
-            value: "Pure Meme Vibes"
+            value: "Dominate"
         }, scrollTrigger: {
             trigger: '.roadmap',
             scrub: 1,

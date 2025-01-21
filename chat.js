@@ -49,7 +49,8 @@ export default () => {
                 chatInput.value = "";
                 addLoader()
 
-                const url = 'https://api.buko.meme/chat'; // Замените на ваш URL
+                const url = 'https://api.buko.meme/chat';
+                // const url = 'http://localhost:5000/chat';
 
                 try {
                     const response = await fetch(url, {
